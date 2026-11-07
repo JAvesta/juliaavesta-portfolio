@@ -1,0 +1,71 @@
+---
+title: "7 steps to 3: One sign-up for every SMAC card"
+subtitle: "In-store registrations never created an app account, so cardholders had to sign up twice. We mapped five sign-up channels and merged them into two linked flows, so registering once gets you straight into the app."
+role: "UX research, service blueprinting"
+timeline: "Feb to Mar 2026"
+company: "SMAC&SHOP · SM DAC"
+appIcon: "/icons/smac.svg"
+order: 1
+metrics:
+  - label: "Onboarding steps, down from 7"
+    value: "3"
+  - label: "Sign-up funnels merged into 2 linked flows"
+    value: "5 → 2"
+  - label: "Point NPS increase for app onboarding"
+    value: "+5"
+tags: ["Field immersion", "Journey mapping", "Flow redesign", "Live on app"]
+---
+
+## The problem
+
+SMAC&SHOP is SM Mall's mobile rewards and cashback app in the Philippines. Registration is key to customer acquisition, but its entry points operated in isolation, creating broken journeys.
+
+<CalloutBox type="problem" title="Millions counted as acquired could not use the app">
+4 of 5 legacy sign-up paths only created a **legacy loyalty record**, so the digital account never existed, pushing customers to re-register to get into SMAC&SHOP.
+</CalloutBox>
+
+<StatCallout value="4 of 5" label="legacy paths created a loyalty record only" />
+<StatCallout value="4+" label="extra steps to re-register for the app" />
+<StatCallout value="5" label="sign-up funnels walked as a customer" />
+
+## How we found out
+
+We walked all five sign-up funnels as a customer: receipt QR, service desk, SMS shortcode, card sticker and the native app. Method: Walk-a-Mile field immersion, five journeys mapped in FigJam.
+
+<ImageGrid cols={2} caption="Before: five isolated funnels. After: two linked flows, in-app (IHAS) and web (Whitebud).">
+<Figure src="/projects/smac-redesign/legacy-funnels.png" alt="FigJam map of the five legacy SMAC sign-up funnels, with friction points marked in red" aspect="4/3" />
+<Figure src="/projects/smac-redesign/unified-flows.png" alt="The two unified flows: IHAS in-app registration and Whitebud web registration" aspect="4/3" />
+</ImageGrid>
+
+<CalloutBox type="insight" title="Three core friction patterns">
+1. **The single-system trap:** most entry points created only a legacy card account.
+2. **Redundant data entry:** people who registered in store filled in the same details again in the app.
+3. **Security and trust barriers:** SMS shortcode links felt risky next to rising worry about phishing.
+</CalloutBox>
+
+## What shipped: one sign-up, two doors
+
+<CalloutBox type="solution" title="Register in-person, scan, and you're set">
+We kept mobile registration, simplified web and kiosk registration, and linked them with **OTP verification**: chosen for its low learning curve and higher trust than legacy text links.
+</CalloutBox>
+
+<BeforeAfterSlider
+  before="/projects/smac-redesign/before.png"
+  after="/projects/smac-redesign/after.png"
+  beforeAlt="The old registration: separate loyalty and app sign-ups across several screens"
+  afterAlt="The new 3-step registration: details, link card, verify"
+  caption="Drag to compare the old and new registration."
+/>
+
+<PrototypeEmbed
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FREPLACE_WITH_YOUR_FILE"
+  caption="Clickable IHAS sign-up prototype (Figma)."
+  aspect="9/16"
+/>
+
+## Key takeaways
+
+- **Fix the system, not five screens.** Patching each funnel would have kept five broken journeys.
+- **Question what the metric counts.** "Acquired" cardholders still couldn't use the app.
+- **Walk it as the customer.** That is where the drop-offs showed up, and why.
+- **Choose the pattern people trust.** OTP beat pattern passwords and security questions.

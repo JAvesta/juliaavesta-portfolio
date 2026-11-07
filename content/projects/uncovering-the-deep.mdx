@@ -1,0 +1,126 @@
+---
+title: "Uncovering the Deep"
+subtitle: "A 2D side-scroller game developed for my undergraduate thesis at De La Salle University-Dasmariñas, teaching kids about plastic waste and overfishing."
+role: "Lead UI/UX Designer, Artist, UX Researcher"
+timeline: "~Mar 2023 to Jun 2023"
+company: "Undergraduate thesis · DLSU-D"
+appIcon: "/icons/game.svg"
+order: 3
+metrics:
+  - label: "alpha testers over two days"
+    value: "54"
+  - label: "would strongly recommend it to a friend"
+    value: "83.3%"
+  - label: "strongly agreed they learned something new"
+    value: "74.1%"
+tags: ["Game & UI design", "Playtests", "Published on itch.io"]
+---
+
+<Figure
+  src="/projects/uncovering-the-deep/title-screen.png"
+  alt="The Uncovering the Deep title screen: a submarine and a manta ray in a deep blue ocean, with Play, Aquarium, Leaderboard and Quit buttons."
+/>
+
+## A game that promotes marine conservation
+
+Created for our undergrad thesis in Game Development, *Uncovering the Deep* is an educational game for children and the youth to learn hands-on through play. Our main goal is to spread awareness about protecting our local ocean ecosystems, and show how **overfishing and plastic waste** affect the creatures that live there.
+
+Team: Julia Avesta, Sean Austin Julag-Ay, John Cedrick Austria. Published and free on itch.io (Windows).
+
+<ImageGrid cols={2}>
+  <Figure src="/projects/uncovering-the-deep/explore.png" alt="Olive the diver swimming past a whale shark and a clownfish." caption="Exploring with Olive." aspect="16/9" />
+  <Figure src="/projects/uncovering-the-deep/aquarium.png" alt="The aquarium where rescued sea animals live and talk to the player." caption="The aquarium of rescued animals." aspect="16/9" />
+</ImageGrid>
+
+## How this project came to be
+
+Grounded in our thesis themes of education and environmental sustainability, we found key insights on marine life and the oceans that opened up an opportunity.
+
+<StatCallout value="8M tons" label="of trash created during the pandemic, 25,000 tons reaching the ocean" />
+<StatCallout value="80%+" label="of the ocean is still undiscovered" />
+<StatCallout value="Billions" label="of fish lost to overfishing and bycatch" />
+
+<CalloutBox type="insight">
+The pandemic kept kids indoors. So we wanted to create a **casual, free game** that brings the ocean to them and builds urgency to protect it. Our earlier game, *Lost in Space*, inspired the proof of concept: we reused its exploration and item-collection mechanics.
+</CalloutBox>
+
+## What research told us, and what we designed
+
+| What we found | What we designed |
+| --- | --- |
+| Children learn best from experience (Hilton, 2021) | Animals talk to Olive, so players see the trash from the animals' side |
+| Real-world grounding builds trust (Beyond Blue, made with marine biologists) | An almanac pairing each sprite with a real photo of the animal |
+| A good story carries the message (Mitscheck et al., 2017) | Olive, a relatable marine biologist protecting her own home |
+
+<ImageGrid cols={1}>
+  <Figure
+    src="/projects/uncovering-the-deep/inspirations.png"
+    alt="A moodboard of underwater game references, an ocean plastic pollution headline about the Philippines, and a screenshot of the team's earlier game Lost in Space."
+    caption="Inspirations: underwater mini-games, aquarium sims, Beyond Blue, our game Lost in Space, and Philippine environmental news."
+  />
+</ImageGrid>
+
+## From first idea to the title screen
+
+<ImageGrid cols={2}>
+  <Figure src="/projects/uncovering-the-deep/title-first.png" alt="An early title screen with Play, Aquarium and Quit buttons." caption="First title screen: Story Mode and Aquarium." aspect="16/9" />
+  <Figure src="/projects/uncovering-the-deep/title-final.png" alt="The final title screen with Play, Aquarium, Leaderboard, Quit and a researcher profile card." caption="Final: plus Endless Mode, leaderboard, player profiles, settings and help." aspect="16/9" />
+</ImageGrid>
+
+## 3 ways to play
+
+1. **Story Mode: Restoration.** Dive → collect trash / free animals → swim up to the submarine. Clear trash and free trapped animals.
+2. **Story Mode: Exploration.** Meet animals → chat & trivia quiz → the animal joins your aquarium.
+3. **Endless Mode: Ocean Cleanup.** Collect trash → swim into a whirlpool → new random map. Most trash before your oxygen runs out.
+
+<ImageGrid cols={3}>
+  <Figure src="/projects/uncovering-the-deep/mode-restoration.png" alt="Dropping trash bags at a submarine in Story Mode: Restoration." caption="Restoration" aspect="16/9" />
+  <Figure src="/projects/uncovering-the-deep/mode-exploration.png" alt="A clownfish dialogue box with trivia in Story Mode: Exploration." caption="Exploration" aspect="16/9" />
+  <Figure src="/projects/uncovering-the-deep/mode-endless.png" alt="An Endless Mode level with a whirlpool." caption="Endless" aspect="16/9" />
+</ImageGrid>
+
+## Alpha testing with 54 people
+
+Over two days, 48 students (a sixth-grade class at Sta. Cruz Elementary School and 21 DLSU-D students), 5 educators and 1 parent played the demo. All 54 answered a 27-question survey, rating each item from 1 to 5 against the **ISO/IEC 25010** quality model.
+
+<ImageGrid cols={2}>
+  <DonutChart title="Who played the demo" caption="Alpha testers, n = 54" center="54" centerLabel="testers"
+    data={[{ label: "Sixth-grade students", value: 27 }, { label: "DLSU-D students", value: 21 }, { label: "Educators", value: 5 }, { label: "Parent", value: 1 }]} />
+  <BarChart title="Average score by category" caption="Out of 5, ISO/IEC 25010, n = 54" max={5} highlight={4}
+    data={[{ label: "Functional suitability", value: 4.58 }, { label: "Usability", value: 4.55 }, { label: "Reliability", value: 4.57 }, { label: "Performance", value: 4.48 }, { label: "Effectiveness", value: 4.62 }]} />
+</ImageGrid>
+
+<ImageGrid cols={1}>
+  <Figure src="/projects/uncovering-the-deep/alpha-testing.png" alt="Photos of students in a classroom and university students playing the game on laptops, with faces blurred." caption="Students and educators playing the demo at Sta. Cruz Elementary School and DLSU-D." />
+</ImageGrid>
+
+## Testing showed where play felt rough
+
+<CalloutBox type="problem" title="Olive was harder to steer than expected">
+Ease of control was the lowest-rated item at 4.3 out of 5. The weighty swim was intentional, but 13% were neutral and 1.9% disagreed.
+</CalloutBox>
+
+<CalloutBox type="problem" title="Hauling trash bags back felt like a chore">
+Each bag slows Olive down, and reaching the spawn point with a full stack was tough, especially for older players.
+</CalloutBox>
+
+<CalloutBox type="problem" title="New players had no space to practice">
+Testers asked for playable tutorial levels before Story Mode. Some were unsure of the controls without the tutorial panel.
+</CalloutBox>
+
+## Learning through play worked
+
+Players enjoyed *Uncovering the Deep* and came away caring about the ocean's creatures, and educators saw its promise as a classroom tool.
+
+<StatCallout value="83.3%" label="would strongly recommend it to a friend" />
+<StatCallout value="75.9%" label="very satisfied with the fun and learning balance" />
+<StatCallout value="74.1%" label="strongly agreed they learned something new" />
+
+## What we would build with more time
+
+- **English and Filipino:** a language toggle so players who don't read English well can follow Story Mode.
+- **Localizing levels:** local Filipino species and waters, so kids learn about the wildlife and plastic crisis around them.
+- **Power-ups & cosmetics:** new ways to finish levels, plus wearable rewards that make replaying more fun.
+- **A mobile version:** to increase accessibility so more kids can learn from the game.
+- **Livening up the ocean:** more animals swimming by, moving kelp and coral, and voice-over for struggling readers.
+- **Bosses and multiplayer:** boss levels, more characters and co-op play for kids who love playing together.

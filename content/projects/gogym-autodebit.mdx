@@ -1,0 +1,145 @@
+---
+title: "Clarifying the Autodebit Payment Experience"
+subtitle: "Revamping GoGym's monthly membership checkout to reduce accidental autodebit enrollments, for members aged 25–30 who already pay for subscriptions online."
+role: "Product Designer"
+timeline: "2 weeks"
+company: "GoGym Philippines"
+appIcon: "/icons/gogym.svg"
+order: 2
+metrics:
+  - label: "people in our onsite A/B test"
+    value: "39"
+  - label: "already pay for subscriptions online"
+    value: "84.6%"
+  - label: "were not fully familiar with “upfront”"
+    value: "51.3%"
+tags: ["Support tickets", "Heuristic review", "A/B testing", "Live in the app"]
+---
+
+<Figure
+  src="/projects/gogym-autodebit/cover.png"
+  alt="Two GoGym app screens: the Go Easy packages page with Autodebit and One-time payment options, and the purchase details page with a QR code, payment status and next billing date."
+/>
+
+## Users confused upfront payment with autodebit
+
+GoGym Philippines is a fitness app that lets members access gyms, workouts and flexible memberships.
+
+<CalloutBox type="problem" title="Unexpected charges">
+Transparent billing is vital for user trust. However, the lack of distinction between upfront and autodebit payments led to **unexpected charges** and a surge in support tickets for payment reversal.
+</CalloutBox>
+
+<ImageGrid cols={1}>
+  <Figure
+    src="/projects/gogym-autodebit/comic.png"
+    alt="Four-panel comic: a gym member is confused by two similar membership options, picks the autodebit one by mistake, enjoys month one, then is shocked by a second charge on their bank statement."
+    caption="A member thinks they bought one month, then gets charged again in month 2."
+    aspect="1/1"
+  />
+</ImageGrid>
+
+## Identifying the problem
+
+I started from what members were already telling us. Support tickets showed people **confusing autodebit with one-time payments**, so I ran a heuristic evaluation of the packages and purchase details screens to find out why.
+
+<CalloutBox type="insight" title="Signal → painpoint → insight">
+Tickets showed **unintended subscriptions** → members were **surprised by monthly charges** → **the payment options were not clear**.
+</CalloutBox>
+
+### Heuristic evaluation
+
+1. **No distinguishing UI for autodebit.** Put side-by-side with one-time payment membership options, the difference is not obvious.
+2. **Unclear terms.** Membership duration is highlighted, every rate label is per month, and payment terms are difficult to read.
+3. **Terminology needs validation.** Many customers may not know what “Autodebit” or “Upfront” means.
+
+## A/B testing with 39 people
+
+We made two versions of each screen and tested them in an onsite interview and survey with 39 people.
+
+<ImageGrid cols={2}>
+  <Figure
+    src="/projects/gogym-autodebit/ab-packages.png"
+    alt="Side-by-side GoGym packages screens. Version A, the original, shows every plan in a monthly rate format under Autodebit and Upfront. Version B, the revamp, labels a Monthly Membership under Autodebit and shows full one-time payment prices."
+    caption="Packages · A (original) vs B (revamp)"
+    aspect="4/3"
+  />
+  <Figure
+    src="/projects/gogym-autodebit/ab-purchase-details.png"
+    alt="Side-by-side GoGym purchase details screens. Version A highlights the next billing date in its own section plus a payment status. Version B keeps the billing date in its original place with a separate payment status."
+    caption="Purchase details · A (status & billing date) vs B (payment status only)"
+    aspect="4/3"
+  />
+</ImageGrid>
+
+First we checked whether people actually understood the payment words.
+
+<ImageGrid cols={2}>
+  <DonutChart title="Do people know “upfront” payment?" caption="Onsite survey, n = 39" center="48.7%" centerLabel="know it"
+    data={[{ label: "Know it", value: 19 }, { label: "Somewhat", value: 9 }, { label: "Do not know it", value: 11 }]} />
+  <DonutChart title="Do people know “autodebit” payment?" caption="Onsite survey, n = 39" center="71.8%" centerLabel="know it"
+    data={[{ label: "Know it", value: 28 }, { label: "Somewhat", value: 5 }, { label: "Do not know it", value: 6 }]} />
+</ImageGrid>
+
+<BarChart title="Which design did testers prefer?" caption="Participants choosing each version, n = 39 per screen"
+  series={["Version A", "Version B"]}
+  data={[
+    { label: "Packages (A original, B revamp)", values: [18, 22] },
+    { label: "Purchase details (A status + billing date, B status only)", values: [32, 9] }
+  ]} />
+
+> “The orange highlight of design A made it easy for me to see the next billing date.” (Tester, purchase details)
+
+## Before and after
+
+<StatCallout value="Clearer names" label="“Upfront” became “One-time payment”, and autodebit became “Monthly Membership”." />
+<StatCallout value="Honest pricing" label="One-time plans show the full price (₱1,977.00), monthly rate small underneath." />
+<StatCallout value="Visible billing" label="Payment status, next billing date and an auto-renewal notice." />
+
+<ImageGrid cols={1}>
+  <Figure
+    src="/projects/gogym-autodebit/design-studies.png"
+    alt="Two rounds of design studies of the purchase details page, for autodebit and upfront plans, showing next due date, amount due, payment method and success or error states."
+    caption="Design studies: Study 1 adds a payment details card; Study 2 adds payment success and error states."
+  />
+</ImageGrid>
+
+<ImageGrid cols={2}>
+  <Figure
+    src="/projects/gogym-autodebit/before.png"
+    alt="The original GoGym packages screen with Autodebit and Upfront plans in the same monthly-rate format, and the original purchase details screen with a QR code and pause membership button."
+    caption="Before revisions: packages and purchase details"
+    aspect="4/3"
+  />
+  <Figure
+    src="/projects/gogym-autodebit/after.png"
+    alt="The revised packages screen with a Monthly Membership and full one-time payment prices, and the revised purchase details screen with an auto-renewal notice, next billing date and payment successful status."
+    caption="After revisions: packages and purchase details"
+    aspect="4/3"
+  />
+</ImageGrid>
+
+## Two new steps before payment
+
+<CalloutBox type="solution" title="Intentional friction">
+A confirmation bottom sheet and the autodebit terms and conditions now sit between choosing a package and reviewing the membership, so nobody signs up for a monthly charge by accident.
+</CalloutBox>
+
+<ImageGrid cols={1}>
+  <Figure
+    src="/projects/gogym-autodebit/checkout-flow.png"
+    alt="User flow diagram of the GoGym checkout, with the new autodebit confirmation and terms and conditions steps outlined in orange."
+    caption="Full checkout journey: gym booking → packages → autodebit confirmation → autodebit T&C → review membership → optional GoAnywhere upgrade → payment (Xendit) → booking successful → booking details."
+  />
+</ImageGrid>
+
+## What shipped
+
+The final autodebit flow is live in the GoGym app.
+
+<ImageGrid cols={1}>
+  <Figure
+    src="/projects/gogym-autodebit/final-screens.png"
+    alt="Five final GoGym screens: choosing a Monthly Membership, an autodebit confirmation sheet stating a monthly charge of 699 pesos, the autodebit terms and conditions, the review membership page, and the purchase details page with a pause membership button."
+    caption="1 Choose a gym package · 2 Confirm autodebit · 3 Accept T&C · 5 Review membership · 6 Purchase details"
+  />
+</ImageGrid>

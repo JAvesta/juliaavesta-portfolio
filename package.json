@@ -1,0 +1,30 @@
+{
+  "name": "juliaos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "next": "15.5.28",
+    "next-mdx-remote": "5.0.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remark-gfm": "^4.0.0",
+    "server-only": "^0.0.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.1.18",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "22.10.2",
+    "@types/react": "19.1.8",
+    "@types/react-dom": "19.1.6",
+    "tailwindcss": "4.1.18",
+    "typescript": "5.7.2"
+  }
+}
