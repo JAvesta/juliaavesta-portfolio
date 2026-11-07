@@ -12,7 +12,14 @@ export async function renderMdx(body: string) {
   const { content } = await compileMDX({
     source: body,
     components: mdxComponents,
-    options: { parseFrontmatter: false, mdxOptions: { remarkPlugins: [remarkGfm] } }, // gfm: tables, strikethrough, autolinks // frontmatter is already parsed + validated in lib/projects.ts
+    options: {
+      parseFrontmatter: false, // frontmatter is already parsed + validated in lib/projects.ts
+      mdxOptions: { remarkPlugins: [remarkGfm] }, // gfm: tables, strikethrough, autolinks
+      // v6 strips JS expressions by default. Our components need them (cols={2}, data={[...]}),
+      // and the MDX is our own files, so allow expressions but keep the dangerous-code filter on.
+      blockJS: false,
+      blockDangerousJS: true,
+    },
   });
   return content;
 }
