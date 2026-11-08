@@ -1,0 +1,97 @@
+{
+  "role": "UI/UX Designer | Digital Artist",
+  "bio": "👋 Hi there! I'm Julia, a UI/UX Designer with a love for creating human-centered experiences. Throughout my career, I've worked across diverse industries, including proptech, fitnesstech, and edutech, driving impactful design solutions.",
+  "chips": [
+    "Proptech",
+    "Fitnesstech",
+    "Edutech",
+    "Retail Loyalty"
+  ],
+  "linkedin": "https://www.linkedin.com/in/julia-a-65695a200/",
+  "email": "juliaavesta.work@gmail.com",
+  "behance": "",
+  "edu": [
+    {
+      "title": "Bachelor's of Science in Computer Science",
+      "school": "De La Salle University-Dasmariñas",
+      "note": "Summa Cum Laude",
+      "icon": "cap",
+      "desc": "During my senior year, I specialized in Game Development for my Bachelor's degree."
+    },
+    {
+      "title": "Visual Art",
+      "school": "South Carolina Governor's School for the Arts and Humanities",
+      "note": "High School",
+      "icon": "brush",
+      "desc": "I studied 1 year in South Carolina Governor's School for the Arts and Humanities with a focus on Visual Arts, developing my creative and design skills."
+    },
+    {
+      "title": "Senior High School",
+      "school": "Penn Foster",
+      "note": "High School",
+      "icon": "cap",
+      "desc": "I graduated high school in 2019 through remote learning through Penn Foster."
+    }
+  ],
+  "interests": [
+    {
+      "label": "Problem Solving",
+      "icon": "bulb",
+      "desc": "My favorite part of my job is the UX Research, investigating as well as coming up with online and offline solutions to a problem."
+    },
+    {
+      "label": "Human-Centered Design",
+      "icon": "heart",
+      "desc": "My principle is to always center the people who I am designing for and representing them well."
+    },
+    {
+      "label": "Equity-Based Design",
+      "icon": "scales",
+      "desc": "My goal is to be able to create products that serve a wide array of people, especially those with specialized needs."
+    },
+    {
+      "label": "Sustainable Design",
+      "icon": "globe",
+      "desc": "With the limited resources we have on the planet, my goal is to be efficient in utilizing the resources that are available to me."
+    }
+  ],
+  "hobbies": [
+    {
+      "label": "Gym",
+      "icon": "dumbbell",
+      "desc": "I try to be consistent and be active as much as I can! I always find that having a healthy body means a healthy mind as well."
+    },
+    {
+      "label": "Cooking",
+      "icon": "pan",
+      "desc": "I got into cooking due to the need to pivot towards a healthier lifestyle. I mainly try to cook high-protein and high-fiber, but I still love me a hearty lasagna!"
+    },
+    {
+      "label": "Baking",
+      "icon": "cupcake",
+      "desc": "In my free time, I like to bake things like cookies and cakes. My specialty is a baked cheesecake topped with fresh fruit!"
+    },
+    {
+      "label": "Making Art",
+      "icon": "palette",
+      "desc": "I like to dabble into anything creative, but my bread and butter is digital illustration. I also like sculpting, crafting cosplay props, and I hope to paint more!"
+    },
+    {
+      "label": "Gaming",
+      "icon": "gamepad",
+      "desc": "I love playing JRPGs and cozy games! My current favorites would have to be Metaphor Refantazio and the Story of Seasons Series!"
+    },
+    {
+      "label": "Enjoying the slow life",
+      "icon": "cup",
+      "desc": "I like to go on walks when the weather is cool, and to spend time with our family dog, Cookie. If you look around here, you might be able to see her :^)"
+    }
+  ],
+  "platforms": [
+    "SMAC&SHOP",
+    "talenthero",
+    "collo",
+    "GoGym",
+    "Kippap"
+  ]
+}

@@ -119,3 +119,9 @@ body {
 .shimeji.off .sh-state{background:var(--line); color:var(--muted)}
 .shimeji.off .pi{filter:grayscale(1); opacity:.55}
 [hidden]{display:none!important}
+
+/* About_Me.html platforms marquee: two identical sets scroll left forever; paused on hover and for reduced motion */
+.marquee-track { animation: marquee 28s linear infinite; }
+.marquee-track:hover { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
