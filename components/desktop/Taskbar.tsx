@@ -1,6 +1,5 @@
 "use client";
 import { useWindows } from "./WindowManager";
-import { TaskbarClock } from "./TaskbarClock";
 
 /** Lists open windows in the order they were opened. Click = focus, click the active one = minimize.
  *  Names shrink to "…" and finally to just the icon (container query in globals.css). */
@@ -32,7 +31,6 @@ export function Taskbar({ titles }: { titles: Record<string, { title: string; ic
           );
         })}
       </div>
-      <TaskbarClock />
     </nav>
   );
 }

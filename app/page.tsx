@@ -3,6 +3,7 @@ import { renderMdx } from "@/lib/mdx";
 import { CaseStudy } from "@/components/CaseStudy";
 import { About } from "@/components/About";
 import { getAbout } from "@/lib/about";
+import { LOCATION } from "@/lib/weather";
 import { Desktop, type DesktopProject } from "@/components/desktop/Desktop";
 
 /**
@@ -18,5 +19,5 @@ export default async function Home() {
 
   const about = <About data={getAbout()} firstProject={raw[0]?.meta.slug} />;
 
-  return <Desktop projects={projects} about={about} />;
+  return <Desktop projects={projects} about={about} city={LOCATION.label} />;
 }

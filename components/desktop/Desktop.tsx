@@ -7,6 +7,7 @@ import { DesktopIcon } from "./DesktopIcon";
 import { Window } from "./Window";
 import { Taskbar } from "./Taskbar";
 import { CookieToggle } from "./CookieToggle";
+import { TopStatus } from "./TopStatus";
 
 // Easter eggs are loaded after the desktop is interactive, and never on the server.
 const Shimeji = dynamic(() => import("./Shimeji").then((m) => m.Shimeji), { ssr: false });
@@ -17,7 +18,7 @@ export type DesktopProject = { meta: ProjectMeta; content: ReactNode };
  * The shell. It receives already-rendered case studies (server-compiled MDX) as
  * opaque ReactNodes and only decides *where* they appear: icon grid, windows, taskbar.
  */
-export function Desktop({ projects, about }: { projects: DesktopProject[]; about: ReactNode }) {
+export function Desktop({ projects, about, city }: { projects: DesktopProject[]; about: ReactNode; city: string }) {
   const titles: Record<string, { title: string; icon?: string }> = { about: { title: "About_Me.html", icon: "/icons/about.svg" } };
   for (const p of projects) titles[p.meta.slug] = { title: p.meta.fileName, icon: p.meta.appIcon };
 
@@ -26,6 +27,7 @@ export function Desktop({ projects, about }: { projects: DesktopProject[]; about
       <div className="desk fixed inset-0 overflow-hidden">
         <header className="menubar fixed inset-x-0 top-0 z-[9000] flex h-[var(--menubar)] items-center gap-4 border-b-2 border-ink bg-surface px-3 font-pixel text-[15px]">
           <span className="font-bold text-peri">✦ JuliaOS</span>
+          <TopStatus city={city} />
         </header>
 
         {/* Scanned from /content/projects: one icon per .mdx file */}
