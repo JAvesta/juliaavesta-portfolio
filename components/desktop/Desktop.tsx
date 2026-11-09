@@ -41,7 +41,7 @@ export function Desktop({ projects, about }: { projects: DesktopProject[]; about
           {about}
         </Window>
         {projects.map((p) => (
-          <Window key={p.meta.slug} id={p.meta.slug} title={p.meta.fileName} icon={p.meta.appIcon} status={<><span className="truncate">{p.meta.company} · {p.meta.timeline}</span><span>Case study</span></>}>
+          <Window key={p.meta.slug} id={p.meta.slug} title={p.meta.fileName} icon={p.meta.appIcon} status={<><span className="truncate">{p.meta.company} · {p.meta.timeline}</span><span className="flex-none">{p.meta.readingMinutes} min read</span></>}>
             {p.content}
           </Window>
         ))}

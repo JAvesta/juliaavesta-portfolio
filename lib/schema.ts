@@ -32,4 +32,5 @@ export type ProjectFrontmatter = z.infer<typeof ProjectFrontmatterSchema>;
 export type ProjectMeta = ProjectFrontmatter & {
   slug: string; // derived from the filename: smac-redesign.mdx -> "smac-redesign"
   fileName: string; // shown under the desktop icon, e.g. "smac-redesign.mdx"
+  readingMinutes: number; // estimated from the MDX body at build time (lib/reading-time.ts)
 };

@@ -6,7 +6,13 @@ import type { ProjectMeta } from "@/lib/schema";
 export function CaseStudy({ meta, children }: { meta: ProjectMeta; children: ReactNode }) {
   return (
     <article className="case-study mx-auto max-w-[920px] px-[clamp(16px,4cqi,40px)] pt-8 pb-16">
-      <p className="text-sm font-bold text-peri">{meta.company}</p>
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+        <p className="text-sm font-bold text-peri">{meta.company}</p>
+        <p className="inline-flex items-center gap-1.5 border-2 border-ink bg-butter-soft px-2 py-0.5 font-pixel text-[13px]">
+          <ClockIcon />
+          {meta.readingMinutes} min read
+        </p>
+      </div>
       <h1 className="mt-2 font-display text-[clamp(30px,5cqi,44px)] leading-[1.12] font-extrabold tracking-tight">{meta.title}</h1>
       <p className="mt-3 max-w-[60ch] text-[clamp(18px,2.4cqi,21px)] leading-snug text-muted">{meta.subtitle}</p>
 
@@ -40,5 +46,14 @@ export function CaseStudy({ meta, children }: { meta: ProjectMeta; children: Rea
 
       <div className="mdx mt-10">{children}</div>
     </article>
+  );
+}
+
+/** 8-bit clock glyph for the reading-time badge. */
+function ClockIcon() {
+  return (
+    <svg viewBox="0 0 9 9" width="13" height="13" shapeRendering="crispEdges" aria-hidden="true">
+      <path fill="currentColor" d="M2 0h5v1H2zM1 1h1v1H1zM7 1h1v1H7zM0 2h1v5H0zM8 2h1v5H8zM1 7h1v1H1zM7 7h1v1H7zM2 8h5v1H2zM4 2h1v3H4zM5 4h2v1H5z" />
+    </svg>
   );
 }

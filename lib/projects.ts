@@ -4,6 +4,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { cache } from "react";
 import { ProjectFrontmatterSchema, type ProjectMeta } from "./schema";
+import { readingMinutes } from "./reading-time";
 
 const PROJECTS_DIR = path.join(process.cwd(), "content", "projects");
 
@@ -18,7 +19,7 @@ async function readProject(fileName: string): Promise<RawProject> {
     const issues = parsed.error.issues.map((i) => `  • ${i.path.join(".") || "(root)"}: ${i.message}`).join("\n");
     throw new Error(`Invalid frontmatter in content/projects/${fileName}:\n${issues}`);
   }
-  return { meta: { ...parsed.data, slug: fileName.replace(/\.mdx$/, ""), fileName }, body: content };
+  return { meta: { ...parsed.data, slug: fileName.replace(/\.mdx$/, ""), fileName, readingMinutes: readingMinutes(content) }, body: content };
 }
 
 /**
